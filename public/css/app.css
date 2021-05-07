@@ -351,6 +351,11 @@ html {
     color: #ffffff;
     border-bottom: 1px solid #444;
   }
+  .header .search-button-mobile {
+    display: block;
+    border: none;
+    background: none;
+  }
   .header .opened-menu {
     display: block;
     opacity: 1;
