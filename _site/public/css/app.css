@@ -40,6 +40,12 @@ html {
   background: #000;
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
 }
+.header .mobile-logo {
+  display: none;
+}
+.header .search-button-mobile {
+  display: none;
+}
 .header .logo-mail {
   display: flex;
   justify-content: space-between;
@@ -72,7 +78,6 @@ html {
   height: auto;
   min-height: 60px;
   padding: 0 0;
-  background: #000;
 }
 .header .navbar {
   max-width: 100%;
@@ -181,7 +186,7 @@ html {
   right: 15px;
   display: none;
   cursor: pointer;
-  width: 2rem;
+  width: 1.3rem;
   height: 1rem;
   border: none;
   outline: none;
@@ -245,6 +250,11 @@ html {
   transition: all 0.35s ease;
 }
 
+@media only screen and (max-width: 993px) {
+  .header {
+    background: #ccc;
+  }
+}
 @media only screen and (min-width: 993px) {
   .header .menu > .menu-item-has-children:hover > .sub-menu {
     display: block;
@@ -351,10 +361,31 @@ html {
     color: #ffffff;
     border-bottom: 1px solid #444;
   }
+  .header .search-button-mobile {
+    display: block;
+    border: none;
+    background: none;
+    color: #fff;
+    position: absolute;
+    right: 44px;
+    width: 44px;
+    height: 44px;
+    top: 10px;
+  }
+  .header .mobile-logo {
+    display: block;
+  }
+  .header .mobile-logo img {
+    width: 100px;
+    margin-left: 15px;
+  }
   .header .opened-menu {
     display: block;
     opacity: 1;
     visibility: visible;
+    position: absolute;
+    right: 15px;
+    top: 22px;
   }
   .header .closed-menu {
     position: absolute;

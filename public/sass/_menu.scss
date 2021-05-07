@@ -17,7 +17,14 @@ html {
     outline: none;
     background: $color-black;
     box-shadow: $shadow-medium;
+   
 
+    .mobile-logo{
+       display:none;
+    }
+    .search-button-mobile{
+       display:none;
+    }
     .logo-mail{
        display:flex;
        justify-content: space-between;
@@ -56,7 +63,7 @@ html {
        height: auto;
        min-height:60px;
        padding: 0 0;
-       background:$color-black;
+   
     }
  
     .navbar {
@@ -191,7 +198,7 @@ html {
       right: 15px;
        display: none;
        cursor: pointer;
-       width: 2rem;
+       width: 1.3rem;
        height: 1rem;
        border: none;
        outline: none;
@@ -263,10 +270,18 @@ html {
        transition: all 0.35s ease;
     }
  }
+
+ @media only screen and (max-width:993px) {
+.header{
+   background:#ccc;    
+}
+ }
  
  // Section: Media Query
  @media only screen and (min-width: 993px) {
     .header {
+  
+     
        .menu {
           > .menu-item-has-children:hover > {
              .sub-menu {
@@ -418,14 +433,31 @@ html {
           display:block;
           border:none;
           background:none;
-          
+          color:#fff;
+          position:absolute;
+          right:44px;
+          width: 44px;
+          height: 44px;
+          top: 10px;
 
+
+       }
+       .mobile-logo{
+          display:block;
+          img{
+             width:100px;
+             margin-left:15px;
+          }
        }
  
        .opened-menu {
           display: block;
           opacity: 1;
           visibility: visible;
+          position:absolute;
+          right:15px;
+          top: 22px;
+          
        }
  
        .closed-menu {
