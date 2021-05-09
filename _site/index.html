@@ -107,21 +107,6 @@
 </section>
 <!-- cookie container close -->
     <!-- navigation -->
-<div class="modal" id="searchModal" tabindex="-1">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="btn-close" data-bs-dismiss="modal"
-                    aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-                <form action="/search">
-                    <input type="text" placeholder="Search" name="searchq" class="form-control">
-                </form>
-            </div>
-        </div>
-    </div>
-</div>
 <div class="header">
 
    <div class="container">
@@ -130,15 +115,30 @@
             <div class="mobile-logo">
                <img src="public/images/LOGO.jpg" />
             </div>
-            <button class="search-button-mobile" data-bs-toggle="modal" data-bs-target="#searchModal">
+            <button class="btn search-button-mobile">
                <i class="fa fa-search"></i>
+               <i class="fa fa-close"></i>
             </button>
+
             <button type="button" class="opened-menu">
                <span></span>
                <span></span>
                <span></span>
                <span></span>
             </button>
+         </div>
+         <div class="search-bar">
+            <form class="/search">
+               <div class="input-group">
+                  <input type="text"
+                     class="form-control"
+                     placeholder="Search">
+                  <button class="btn btn-outline-secondary"
+                     type="submit">
+                     <i class="fa fa-search"></i>
+                  </button>
+               </div>
+            </form>
          </div>
          <div class="overlay"></div>
          <nav class="navbar">
@@ -196,11 +196,15 @@
                   </ul>
                </li>
                <li class="menu-item"><a href="#">Contact</a></li>
-               <li class="menu-item"><a href="#" data-bs-toggle="modal" data-bs-target="#searchModal">
+               <li class="menu-item">
+                  <a href="#" class="search-button-mobile">
                      <i class="fa fa-search"></i>
-                  </a></li>
-            </ul>
+                     <i class="fa fa-close"></i>
+                  </a>
 
+                  
+               </li>
+            </ul>
          </nav>
       </section>
    </div>

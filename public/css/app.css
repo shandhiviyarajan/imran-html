@@ -43,8 +43,29 @@ html {
 .header .mobile-logo {
   display: none;
 }
+.header .search-bar {
+  display: none;
+  position: absolute;
+  width: 100%;
+  max-width: 360px;
+  min-width: 360px;
+  right: 0px;
+  background: #000;
+  padding: 16px 16px;
+  top: 72px;
+  right: 0px;
+}
 .header .search-button-mobile {
   display: none;
+}
+.header .search-button-mobile i.fa-close {
+  display: none;
+}
+.header .search-button-mobile.open-search i.fa-search {
+  display: none;
+}
+.header .search-button-mobile.open-search i.fa-close {
+  display: block;
 }
 .header .logo-mail {
   display: flex;
@@ -378,6 +399,9 @@ html {
   .header .mobile-logo img {
     width: 100px;
     margin-left: 15px;
+  }
+  .header .search-bar {
+    top: 60px;
   }
   .header .opened-menu {
     display: block;

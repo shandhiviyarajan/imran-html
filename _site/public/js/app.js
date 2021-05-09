@@ -22,6 +22,14 @@
          * Header
          */
         function Header() {
+
+            function _searchToggle(){
+                $(".search-button-mobile").on('click',function(e){
+                    e.preventDefault();
+                    $(this).toggleClass('open-search');
+                    $(".search-bar").fadeToggle(300);
+                });
+            }
           
             function _slideout() {
 
@@ -51,9 +59,8 @@
 
             return {
                 init: function () {
-               
-                  //  _slideout();
                    _closeCookie();
+                   _searchToggle();
                 }
             }
         }
